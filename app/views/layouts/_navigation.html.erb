@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= link_to 'Jaren Cudilla', articles_path, class: "navbar-brand", id: "logo" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+       <%= link_to "Article List", articles_path %>
+       <%= link_to "Create Article", articles_new_path %>
+       <%= link_to "About", "https://jarencudilla.github.io" %>
+       <%= link_to "Projects", "https://jarencudilla.github.io" %>
+    </ul>
+  </div>
+</nav>

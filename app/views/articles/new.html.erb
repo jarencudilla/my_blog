@@ -1,0 +1,31 @@
+<h1>Create a New Article</h1>
+
+<div>
+<% if @article.errors.any? %>
+<h2>Ooops! The Article was not created due to the following errors</h2>
+  <ul>
+    <% @article.errors.full_messages.each do |message| %>
+    <li>
+      <%= message %>
+    </li>
+    <% end %>
+  </ul>
+<% end %>
+</div>
+
+<%= form_with scope: :article, url: articles_create_path do |f| %>
+
+<div>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
+
+<div>
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+</div>
+
+<div>
+  <%= f.submit %>
+</div>
+<% end %>
